@@ -11,7 +11,8 @@ function useFetch(URL) {
      .then(res => res.json())
      .then(
        (results) => {
-         const articles = results.result.problems
+         const articles = results.result.problems;
+         
          setArticles(articles);
  
        })
@@ -20,7 +21,7 @@ function useFetch(URL) {
        })
        return ()=> abortCont.abort();
  }, [URL])
- return articles
+ return articles;
 }
 
 export default useFetch
