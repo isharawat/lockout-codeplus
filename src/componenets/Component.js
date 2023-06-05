@@ -4,7 +4,7 @@ export default function Componen({obj}) {
         <div>
           
             <span>{obj.rating}</span>
-            <a href= {urlstring} target="blank"> <span>{obj.name}</span></a>
+            <a href= {urlstring} target="_blank"> <span>{obj.name}</span></a>
         </div>
     )
 }

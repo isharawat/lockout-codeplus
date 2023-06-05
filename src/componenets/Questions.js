@@ -4,8 +4,8 @@ import Componen from './Component';
 
 const Questions = () => {
   const questions = useFetch("https://codeforces.com/api/problemset.problems?tags=implementation")
-  let total = [];
-  var x = {
+  const total = [];
+  const x = {
     800: [], 
     900: [], 
     1000: [], 
@@ -25,16 +25,29 @@ const Questions = () => {
     2400: [], 
     2500: [], 
     2600: [],  
-    2700:[], 
+    2700: [], 
+    2800: [], 
+    2900: [], 
+    3000: [], 
+    3100: [], 
+    3200: [], 
+    3300: [], 
+    3400: [], 
+    3500: [], 
   };
-  var map = new Map();
   for(let q in questions) {
     let p = questions[q].rating;
     total.push(questions[q]);
-    // x.p.push(questions[q]);
-    
+  
+    let pstr = String(p);
+    if(x[pstr]) {
+      x[pstr].push(questions[q]);  
+    }
+    else {
+      console.log(questions[q]);
+    }
   }
-  console.log(total);
+  console.log(x);
   return (
     <>
       {

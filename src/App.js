@@ -7,7 +7,7 @@ function App() {
   const [p, setP] = useState('');
   const handleSubmit = (()=>{
     let r = (Math.random() + 1).toString(36).substring(7);
-    console.log("random", r);
+    console.log(r);
     setP(r);
   })
   const [name, setName] = useState("");
@@ -24,7 +24,7 @@ function App() {
     <>
     <div>HIIIIIIIIIII</div>
     <div className="App">
-      {/* {stat === "" && p === "" ?
+      {stat === "" && p === "" ?
       <button onClick={handleSubmit}>Create contest</button>:
       <div>
         <label> Provide code</label>
@@ -36,8 +36,8 @@ function App() {
       }
       {stat === "true"? 
        <Questions/> :<span></span>
-      } */}
-       <Form/>
+      }
+       {/* <Form/> */}
     </div>
     </>
   );
